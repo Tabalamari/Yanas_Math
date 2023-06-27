@@ -2,12 +2,19 @@ let firstNumber = document.getElementById("firstNumber");
 let secondNumber = document.getElementById("secondNumber");
 let sign = document.getElementById("sign");
 
+let randNumb = function(){
+    return Math.floor(Math.random()*100)+1;
+ }
+
+firstNumber.innerText = randNumb();
+secondNumber.innerText = randNumb();
+
+
 
 let fn = firstNumber.innerText;
 let sn = secondNumber.innerText;
 let sg = sign.innerText;
 
-firstNumber.innerText = 46;
 
 function myFunction() {
     // console.log(Number(fn) + Number(sn))
