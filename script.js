@@ -2,7 +2,7 @@ let firstNumber = document.getElementById("firstNumber");
 let secondNumber = document.getElementById("secondNumber");
 let sign = document.getElementById("sign");
 
-let randNumb = function () {
+function randNumb() {
     return Math.floor(Math.random() * 100) + 1;
 }
 
@@ -15,14 +15,11 @@ let sn = secondNumber.innerText;
 
 sign.innerText = changeSign();
 let sg = sign.innerText;
-// console.log(sg)
 
 function checkAnswer() {
-    // console.log(Number(fn) + Number(sn))
     let answer = document.getElementById("answer");
     let aw = answer.value;
-    // console.log(Number(aw))
-    // console.log(Number(fn) + Number(sn) === Number(aw))
+
     if (sg === "+") {
         if (Number(fn) + Number(sn) === Number(aw)) {
             alert("Ти молодець!")
@@ -55,5 +52,5 @@ function changeSign() {
     if (fn > sn) {
         return "-";
     }
-    else {return "+"}
+    else { return "+" }
 }
