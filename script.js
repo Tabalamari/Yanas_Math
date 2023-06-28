@@ -2,19 +2,18 @@ let firstNumber = document.getElementById("firstNumber");
 let secondNumber = document.getElementById("secondNumber");
 let sign = document.getElementById("sign");
 
-function randNumb() {
-    return Math.floor(Math.random() * 100) + 1;
-}
-
 firstNumber.innerText = randNumb();
 secondNumber.innerText = randNumb();
-
 
 let fn = firstNumber.innerText;
 let sn = secondNumber.innerText;
 
 sign.innerText = changeSign();
 let sg = sign.innerText;
+
+function randNumb() {
+    return Math.floor(Math.random() * 100) + 1;
+}
 
 function checkAnswer() {
     let answer = document.getElementById("answer");
@@ -44,10 +43,11 @@ function checkAnswer() {
 
     }
 }
+
 function reloadPage() {
     window.location.reload()
 }
-
+ß
 function changeSign() {
     if (fn > sn) {
         return "-";
