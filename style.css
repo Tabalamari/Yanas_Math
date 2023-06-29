@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    font-size: 150px;
+
+}
+.firstNum {
+    color: blueviolet;
+}
+.secondNum {
+    color: rgb(3, 167, 148); 
+}
+.answ {
+    font-size: 150px;
+    width: 260px;
+}

@@ -47,7 +47,7 @@ function checkAnswer() {
 function reloadPage() {
     window.location.reload()
 }
-ß
+
 function changeSign() {
     if (fn > sn) {
         return "-";
