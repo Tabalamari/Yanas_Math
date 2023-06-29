@@ -19,22 +19,11 @@ function checkAnswer() {
     let answer = document.getElementById("answer");
     let aw = answer.value;
 
-    if (sg === "+") {
-        if (Number(fn) + Number(sn) === Number(aw)) {
-            wellDone()
-        }
-        else {
-            tryAgain();
-        }
+    if (checkCalculation(fn, sn, sg, aw)) {
+        wellDone()
     }
     else {
-        if (Number(fn) - Number(sn) === Number(aw)) {
-            wellDone()
-        }
-        else {
-            tryAgain();
-        }
-
+        tryAgain();
     }
 }
 
@@ -60,3 +49,11 @@ function wellDone() {
     reloadPage()
 }
 
+function checkCalculation(fn, sn, sg, aw) {
+    if (sg === "+") {
+        return Number(fn) + Number(sn) === Number(aw)
+    }
+    if (sg === "-") {
+        return Number(fn) - Number(sn) === Number(aw)
+    }
+}
