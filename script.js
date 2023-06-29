@@ -21,24 +21,18 @@ function checkAnswer() {
 
     if (sg === "+") {
         if (Number(fn) + Number(sn) === Number(aw)) {
-            alert("Ти молодець!")
-            reloadPage()
+            wellDone()
         }
         else {
-            alert("Спробуй ще раз :)")
-            answer.value = "";
-            console.log("false")
+            tryAgain();
         }
     }
     else {
         if (Number(fn) - Number(sn) === Number(aw)) {
-            alert("Ти молодець!")
-            reloadPage()
+            wellDone()
         }
         else {
-            alert("Спробуй ще раз :)")
-            answer.value = "";
-            console.log("false")
+            tryAgain();
         }
 
     }
@@ -54,3 +48,15 @@ function changeSign() {
     }
     else { return "+" }
 }
+
+function tryAgain() {
+    alert("Спробуй ще раз :)")
+    answer.value = "";
+    console.log("false")
+}
+
+function wellDone() {
+    alert("Ти молодець!")
+    reloadPage()
+}
+
