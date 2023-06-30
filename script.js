@@ -11,6 +11,9 @@ let sn = secondNumber.innerText;
 sign.innerText = changeSign();
 let sg = sign.innerText;
 
+
+
+
 function randNumb() {
     return Math.floor(Math.random() * 100) + 1;
 }
@@ -46,6 +49,9 @@ function tryAgain() {
 
 function wellDone() {
     alert("Ти молодець!")
+    let qty = Number(window.localStorage.getItem("Alldone"))
+    let newQty = qty+1;
+    window.localStorage.setItem("Alldone",newQty)
     reloadPage()
 }
 
