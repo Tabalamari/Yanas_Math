@@ -35,7 +35,7 @@ function reloadPage() {
 }
 
 function changeSign() {
-    if (Number(fn) > Number(sn)) {
+    if (fn > sn) {
         return "-";
     }
     else { return "+" }
@@ -80,5 +80,4 @@ function showModalwindow() {
         answer.value = "";
     }
 }
-
 
