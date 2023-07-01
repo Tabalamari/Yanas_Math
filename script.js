@@ -50,9 +50,12 @@ function tryAgain() {
 function wellDone() {
     alert("Ти молодець!")
     let qty = Number(window.localStorage.getItem("Alldone"))
-    let newQty = qty+1;
-    window.localStorage.setItem("Alldone",newQty)
-    reloadPage()
+    let newQty = qty + 1;
+    window.localStorage.setItem("Alldone", newQty)
+    if (newQty === 3) {
+        showModalwindow();
+    }
+    else { reloadPage() }
 }
 
 function checkCalculation(fn, sn, sg, aw) {
@@ -63,3 +66,20 @@ function checkCalculation(fn, sn, sg, aw) {
         return Number(fn) - Number(sn) === Number(aw)
     }
 }
+
+function showModalwindow() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // alert("Modal window")
+    modal.style.display = "block";
+    span.onclick = function () {
+        modal.style.display = "none";
+        window.localStorage.clear();
+        answer.value = "";
+    }
+}
+
+// TODO: Виправити: перше число іноді менше за друге при знакі мінус.
+
