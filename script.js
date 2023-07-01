@@ -35,7 +35,7 @@ function reloadPage() {
 }
 
 function changeSign() {
-    if (fn > sn) {
+    if (Number(fn) > Number(sn)) {
         return "-";
     }
     else { return "+" }
@@ -81,5 +81,4 @@ function showModalwindow() {
     }
 }
 
-// TODO: Виправити: перше число іноді менше за друге при знакі мінус.
 
