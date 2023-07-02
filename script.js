@@ -1,3 +1,4 @@
+import {checkCalculation, randNumb, changeSign} from "./modules/math.js";
 let firstNumber = document.getElementById("firstNumber");
 let secondNumber = document.getElementById("secondNumber");
 let sign = document.getElementById("sign");
@@ -7,16 +8,9 @@ secondNumber.innerText = randNumb();
 
 let fn = firstNumber.innerText;
 let sn = secondNumber.innerText;
-
-sign.innerText = changeSign();
+sign.innerText = changeSign(fn, sn);
 let sg = sign.innerText;
 
-
-
-
-function randNumb() {
-    return Math.floor(Math.random() * 100) + 1;
-}
 
 function checkAnswer() {
     let answer = document.getElementById("answer");
@@ -32,13 +26,6 @@ function checkAnswer() {
 
 function reloadPage() {
     window.location.reload()
-}
-
-function changeSign() {
-    if (fn > sn) {
-        return "-";
-    }
-    else { return "+" }
 }
 
 function tryAgain() {
@@ -58,14 +45,6 @@ function wellDone() {
     else { reloadPage() }
 }
 
-function checkCalculation(fn, sn, sg, aw) {
-    if (sg === "+") {
-        return Number(fn) + Number(sn) === Number(aw)
-    }
-    if (sg === "-") {
-        return Number(fn) - Number(sn) === Number(aw)
-    }
-}
 
 function showModalwindow() {
     // Get the modal
@@ -80,4 +59,3 @@ function showModalwindow() {
         answer.value = "";
     }
 }
-
